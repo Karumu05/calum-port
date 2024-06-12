@@ -31,3 +31,14 @@ body {
     text-wrap: balance;
   }
 }
+
+.animate-title {
+  animation: title 3s ease-out forwards;
+}
+
+.glow-text {
+  color: white;
+  text-shadow: 
+  0 0 5px rgba(0, 0, 0, 0.5),
+  0 0 10px rgba(0, 0, 0, 0.3);
+}
