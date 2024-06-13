@@ -42,3 +42,19 @@ body {
   0 0 5px rgba(0, 0, 0, 0.5),
   0 0 10px rgba(0, 0, 0, 0.3);
 }
+
+.contact-link {
+  display: flex; 
+  align-items: center; 
+  flex-direction: column;
+}
+
+.contact-link p {
+  display: none; 
+  transition: display 0.3s ease; 
+}
+
+.contact-link:hover p {
+  display: block;
+}
+
