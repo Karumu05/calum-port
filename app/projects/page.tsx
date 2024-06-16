@@ -11,22 +11,47 @@ import { db } from "../firebaseConfig";
 import ProjectArticle from "../components/projectArticle";
 import FeaturedProjectArticle from "../components/featuredProjectArticle";
 
-export default function Projects() {
-  const [projects, setProjects] = useState([]);
+type Project = {
+  id?: string;
+  date: string;
+  description: string;
+  image: string;
+  name: string;
+  techUsed: string;
+  info: string;
+};
 
-  // useEffect(() => {
-  //   const projectsRef = ref(db, "projects");
-  //   get(projectsRef).then((snapshot) => {
-  //     if (snapshot.exists()) {
-  //       const projectArray = Object.entries(snapshot.val()).map(([id, data]) => ({id, ...data}))
-  //       setProjects(projectArray)
-  //     } else {
-  //       alert("No Data Avaliable")
-  //     }
-  //   }).catch((error) => {
-  //     console.error(error)
-  //   })
-  // }, [])
+interface FetchedProjectData {
+  id?: string;
+  date: string;
+  description: string;
+  image: string;
+  name: string;
+  techUsed: string;
+  info: string;
+}
+
+export default function Projects() {
+  const [ncProjects, setNCProjects] = useState<Project[]>([]);
+  const [genProjects, setGenProjects] = useState<Project[]>([])
+
+  useEffect(() => {
+    const projectsRef = ref(db, "projects");
+    get(projectsRef)
+      .then((snapshot) => {
+        if (snapshot.exists()) {
+          const projectArray: Project[] = Object.entries(
+            snapshot.val() as FetchedProjectData[]
+          ).map(([id, data]) => ({ id, ...data }));
+          setNCProjects(projectArray);
+        } else {
+          alert("No Data Avaliable");
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
 
   return (
     <>
@@ -35,8 +60,6 @@ export default function Projects() {
           <FontAwesomeIcon icon={faArrowAltCircleLeft} size="3x" />
         </Link>
       </header>
-
-      {/* Page title section */}
 
       <main className="h-screen px-6 mx-auto space-y-8 max-w-7xl">
         <div className="max-w-3xl ">
@@ -62,30 +85,33 @@ export default function Projects() {
           />
         </div>
 
-        {/* Featured Post Section */}
         <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 relative">
           <FeaturedProjectArticle
-            name="Test project"
-            date="test date"
-            info="test project"
+            name={ncProjects[0]?.name}
+            date={ncProjects[0]?.date}
+            info={ncProjects[0]?.info}
           />
 
-
-          {/* Top Two Projects section */}
-          <ProjectArticle date="test" name="test" info="test" />
-          <ProjectArticle date="test" name="test" info="test" />
+          <ProjectArticle
+            date={ncProjects[1]?.date}
+            name={ncProjects[1]?.name}
+            info={ncProjects[1]?.info}
+          />
+          <ProjectArticle
+            date={ncProjects[2]?.date}
+            name={ncProjects[2]?.name}
+            info={ncProjects[2]?.info}
+          />
         </div>
         <div className="hidden w-full h-px md:block bg-black dark:bg-white "></div>
 
-        {/* Bottom Grid Project Section */}
-
         <div className="grid grid-col-1 gap-4 mx-auto lg:mx-0 md:grid-cols-3">
           <div className="grid-cols-1 gap-4">
-            <ProjectArticle
-              date="01-03-2024"
-              name="test"
-              info="this is a test"
-            />
+            {/* <ProjectArticle
+              date={projects[3]?.date}
+              name={projects[3]?.name}
+              info={projects[3]?.info}
+            /> */}
           </div>
           <div className="grid-cols-2 gap-4"></div>
           <div className="grid-cols-3 gap-4"></div>
