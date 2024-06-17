@@ -32,34 +32,20 @@ interface FetchedProjectData {
 }
 
 export default function Projects() {
-  const [ncProjects, setNCProjects] = useState<Project[]>([]);
-  const [genProjects, setGenProjects] = useState<Project[]>([]);
+  const [allProjects, setAllProjects] = useState<Project[]>([]);
 
   useEffect(() => {
-    const ncProjectsRef = ref(db, "projects");
-    const genProjectsRef = ref(db, "genProjects");
+    const projectsRef = ref(db, "projects");
 
     async function fetchData() {
       try {
-        const [ncProjectsSnapshot, genProjectsSnapshot] = await Promise.all([
-          get(ncProjectsRef),
-          get(genProjectsRef),
-        ]);
+        const projectSnap = await get(projectsRef);
 
-        if (ncProjectsSnapshot.exists()) {
-          const ncProjectArray: Project[] = Object.entries(
-            ncProjectsSnapshot.val() as FetchedProjectData[]
-          ).map(([id, data]) => ({ id, ...data }));
-          setNCProjects(ncProjectArray);
-        } else {
-          console.warn("No Data Avaliable");
-        }
-
-        if (genProjectsSnapshot.exists()) {
-          const genProjectArray: Project[] = Object.entries(
-            genProjectsSnapshot.val() as FetchedProjectData[]
-          ).map(([id, data]) => ({ id, ...data }));
-          setGenProjects(genProjectArray);
+        if (projectSnap.exists()) {
+          const projectArray = Object.entries(projectSnap.val()).map(
+            ([id, data]) => ({ id, ...data })
+          );
+          setAllProjects(projectArray);
         } else {
           console.warn("No Data Avaliable");
         }
@@ -70,6 +56,8 @@ export default function Projects() {
 
     fetchData();
   }, [db]);
+
+  const mapProjectsArray = allProjects.slice(3);
 
   return (
     <>
@@ -105,30 +93,30 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 relative">
           <FeaturedProjectArticle
-            name={ncProjects[0].name}
-            date={ncProjects[0].date}
-            info={ncProjects[0].info}
-            key={ncProjects[0].id}
+            name={allProjects[2]?.name}
+            date={allProjects[2]?.date}
+            info={allProjects[2]?.info}
+            key={allProjects[2]?.name}
           />
 
           <ProjectArticle
-            date={ncProjects[1].date}
-            name={ncProjects[1].name}
-            info={ncProjects[1].info}
-            key={ncProjects[1].id}
+            date={allProjects[0]?.date}
+            name={allProjects[0]?.name}
+            info={allProjects[0]?.info}
+            key={allProjects[0]?.name}
           />
           <ProjectArticle
-            date={ncProjects[2].date}
-            name={ncProjects[2].name}
-            info={ncProjects[2].info}
-            key={ncProjects[2].id}
+            date={allProjects[1]?.date}
+            name={allProjects[1]?.name}
+            info={allProjects[1]?.info}
+            key={allProjects[1]?.id}
           />
         </div>
         <div className="hidden w-full h-px md:block bg-black dark:bg-white "></div>
 
         <div>
           <div className="flex justify-evenly">
-            {genProjects.map((genProject) => {
+            {mapProjectsArray.map((genProject) => {
               return (
                 <ProjectArticle
                   date={genProject.date}
