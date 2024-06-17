@@ -33,25 +33,43 @@ interface FetchedProjectData {
 
 export default function Projects() {
   const [ncProjects, setNCProjects] = useState<Project[]>([]);
-  const [genProjects, setGenProjects] = useState<Project[]>([])
+  const [genProjects, setGenProjects] = useState<Project[]>([]);
 
   useEffect(() => {
-    const projectsRef = ref(db, "projects");
-    get(projectsRef)
-      .then((snapshot) => {
-        if (snapshot.exists()) {
-          const projectArray: Project[] = Object.entries(
-            snapshot.val() as FetchedProjectData[]
+    const ncProjectsRef = ref(db, "projects");
+    const genProjectsRef = ref(db, "genProjects");
+
+    async function fetchData() {
+      try {
+        const [ncProjectsSnapshot, genProjectsSnapshot] = await Promise.all([
+          get(ncProjectsRef),
+          get(genProjectsRef),
+        ]);
+
+        if (ncProjectsSnapshot.exists()) {
+          const ncProjectArray: Project[] = Object.entries(
+            ncProjectsSnapshot.val() as FetchedProjectData[]
           ).map(([id, data]) => ({ id, ...data }));
-          setNCProjects(projectArray);
+          setNCProjects(ncProjectArray);
         } else {
-          alert("No Data Avaliable");
+          console.warn("No Data Avaliable");
         }
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
+
+        if (genProjectsSnapshot.exists()) {
+          const genProjectArray: Project[] = Object.entries(
+            genProjectsSnapshot.val() as FetchedProjectData[]
+          ).map(([id, data]) => ({ id, ...data }));
+          setGenProjects(genProjectArray);
+        } else {
+          console.warn("No Data Avaliable");
+        }
+      } catch (error) {
+        console.error("Error fetching Project data", error);
+      }
+    }
+
+    fetchData();
+  }, [db]);
 
   return (
     <>
@@ -105,16 +123,18 @@ export default function Projects() {
         </div>
         <div className="hidden w-full h-px md:block bg-black dark:bg-white "></div>
 
-        <div className="grid grid-col-1 gap-4 mx-auto lg:mx-0 md:grid-cols-3">
-          <div className="grid-cols-1 gap-4">
-            {/* <ProjectArticle
-              date={projects[3]?.date}
-              name={projects[3]?.name}
-              info={projects[3]?.info}
-            /> */}
+        <div>
+          <div className="flex justify-evenly">
+            {genProjects.map((genProject) => {
+              return (
+                <ProjectArticle
+                date={genProject.date}
+                name={genProject.name}
+                info={genProject.info}
+              />
+              )
+            })}
           </div>
-          <div className="grid-cols-2 gap-4"></div>
-          <div className="grid-cols-3 gap-4"></div>
         </div>
       </main>
     </>
