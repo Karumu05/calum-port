@@ -105,20 +105,23 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 relative">
           <FeaturedProjectArticle
-            name={ncProjects[0]?.name}
-            date={ncProjects[0]?.date}
-            info={ncProjects[0]?.info}
+            name={ncProjects[0].name}
+            date={ncProjects[0].date}
+            info={ncProjects[0].info}
+            key={ncProjects[0].id}
           />
 
           <ProjectArticle
-            date={ncProjects[1]?.date}
-            name={ncProjects[1]?.name}
-            info={ncProjects[1]?.info}
+            date={ncProjects[1].date}
+            name={ncProjects[1].name}
+            info={ncProjects[1].info}
+            key={ncProjects[1].id}
           />
           <ProjectArticle
-            date={ncProjects[2]?.date}
-            name={ncProjects[2]?.name}
-            info={ncProjects[2]?.info}
+            date={ncProjects[2].date}
+            name={ncProjects[2].name}
+            info={ncProjects[2].info}
+            key={ncProjects[2].id}
           />
         </div>
         <div className="hidden w-full h-px md:block bg-black dark:bg-white "></div>
@@ -128,11 +131,12 @@ export default function Projects() {
             {genProjects.map((genProject) => {
               return (
                 <ProjectArticle
-                date={genProject.date}
-                name={genProject.name}
-                info={genProject.info}
-              />
-              )
+                  date={genProject.date}
+                  name={genProject.name}
+                  info={genProject.info}
+                  key={genProject.id}
+                />
+              );
             })}
           </div>
         </div>
