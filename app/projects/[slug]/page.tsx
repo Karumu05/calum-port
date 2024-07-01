@@ -67,6 +67,8 @@ export default function individualPage() {
     fetchData();
   }, [db]);
 
+
+
   return (
     <>
       <header className="container flex flex-row items-center justify-between p-6 mx-auto">
@@ -123,7 +125,7 @@ export default function individualPage() {
         <div className="w-full h-px bg-black dark:bg-white"></div>
 
         <div>
-          <h3 className="text-center">Project Links</h3>
+          <h3 className="text-center font-bold">Project Links</h3>
           <div className="flex justify-evenly">
             {pageProjet.links ? (
               Object.keys(pageProjet.links).map((key) => (

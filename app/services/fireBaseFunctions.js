@@ -3,7 +3,7 @@ import {ref, getDownloadURL} from "firebase/storage"
 import { db } from "../firebaseConfig";
 import { get } from "firebase/database";
 
-export const fetchImageUrl = async (imageName) => {
+export const FetchImageUrl = async (imageName) => {
     const imageRef = ref(storage, `project-images/${imageName}`)
 
     try {
@@ -30,4 +30,16 @@ export const fetchIndividualProject = async (route) => {
     }
 }
 
-export default {}
+export const FetchAboutImageUrl = async (imageName) => {
+    const imageRef = ref(storage, `about-images/${imageName}.png`)
+
+    try {
+        const url = await getDownloadURL(imageRef)
+        return url
+
+    } catch (error) {
+        console.error("Error fetching image", error)
+        return null
+    }
+
+}
