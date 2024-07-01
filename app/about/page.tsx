@@ -237,7 +237,7 @@ export default function About() {
               <br></br>
               <p>
                 {" "}
-                I aim to work in an environment where my values shine through.
+                I aim to work in an environment where these values shine through.
                 Clear and respectful communication is very important to achieve.
                 I would hope that all workplaces strive for this value to
                 develop a trusting team that can work under trust and provide
