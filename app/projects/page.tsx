@@ -35,6 +35,7 @@ export default function Projects() {
   const [allProjects, setAllProjects] = useState<Project[]>([]);
 
   useEffect(() => {
+    
     const projectsRef = ref(db, "projects");
 
     async function fetchData() {
@@ -55,7 +56,7 @@ export default function Projects() {
     }
 
     fetchData();
-  }, [db]);
+  }, []);
 
   const mapProjectsArray = allProjects.slice(3);
 

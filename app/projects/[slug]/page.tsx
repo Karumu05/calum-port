@@ -65,7 +65,7 @@ export default function IndividualPage() {
     };
 
     fetchData();
-  }, [db]);
+  },[route]);
 
 
 
@@ -107,7 +107,7 @@ export default function IndividualPage() {
 
             <ul className="list-disc list-inside items-center  p-2 h-full">
               {pageProjet.techUsed?.split(" ").map((tech) => {
-                return <li>{tech}</li>;
+                return <li key={tech}>{tech}</li>;
               })}
             </ul>
           </div>
