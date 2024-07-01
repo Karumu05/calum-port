@@ -28,7 +28,6 @@ export default function About() {
       </header>
 
       <main className="h-screen px-6 mx-auto space-y-8 max-w-7xl">
-
         <section className=" flex justify-evenly my-4 p-8">
           <Image
             src={profilePic}
@@ -39,73 +38,208 @@ export default function About() {
           />
 
           <div className="flex flex-col text-center justify-center p-4 m-4">
-            <h1 className="text-5xl text-center font-bold my-8 underline">Calum Borders</h1>
-            <h2 className="text-5xl text-center font-bold my-8">Software Engineer</h2>
+            <h1 className="text-5xl text-center font-bold my-8 underline">
+              Calum Borders
+            </h1>
+            <h2 className="text-5xl text-center font-bold my-8">
+              Software Engineer
+            </h2>
           </div>
         </section>
 
         <div className="w-full h-px bg-black dark:bg-white"></div>
 
         <section className="px-4">
-            <h2 className="text-2xl font-bold my-4">Bio</h2>
-            <p className="my-4 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis convallis magna ac porttitor. Aliquam ullamcorper est augue, nec euismod leo lobortis sit amet. Aenean gravida eleifend elementum. Donec dictum libero vitae congue posuere. In ut sodales massa. Nulla vitae mattis enim, eget sagittis felis. Ut felis turpis, scelerisque sit amet nisl at, euismod tristique elit. Nulla facilisi. Integer aliquam porta ligula vitae volutpat. Vivamus velit purus, pellentesque id lacus ac, facilisis convallis justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent tristique quis massa quis vehicula. Donec interdum volutpat dui eget cursus. Fusce semper sollicitudin ipsum sed auctor.
-
-            Ut interdum purus neque, id placerat neque aliquet a. Praesent molestie varius magna, feugiat consectetur turpis fermentum quis. Nunc porta laoreet dui faucibus bibendum. Integer eget risus vel est congue gravida in id augue. Pellentesque nec ipsum id quam maximus mollis sit amet vel nisl. Nunc blandit orci eu placerat ultrices. Fusce placerat nisi tellus, non pharetra orci ornare vel. Nullam vel ipsum risus. Nunc luctus nulla ut euismod imperdiet. Nam auctor, dui vel consequat pellentesque, elit magna congue lacus, ut aliquam nunc est sed massa. Aliquam imperdiet ullamcorper nibh, ac vestibulum dolor consequat eget. Sed mauris nulla, laoreet a sollicitudin nec, mattis id est. Etiam ex massa, porttitor quis velit at, dictum convallis nisl. Morbi vulputate nibh nulla, sit amet pretium ipsum bibendum sit amet. Nunc et orci sit amet quam blandit faucibus. Integer facilisis tincidunt metus, in facilisis nisi sollicitudin sit amet.</p>
+          <h2 className="text-2xl font-bold my-4">Bio</h2>
+          <h3 className="text-lg underline font-bold">🎌 From Japanophile to Aspiring Dev: My Coding Odyssey 🧑🏻‍💻 </h3>
+          <div className="my-4 text-justify text-lg">
+            <p>
+              {" "}
+              I wasn't always coding! My love affair with Japan started in
+              Primary school. I quickly needed to know more. This fascination
+              led me to delve deeper into high school, where I mastered two
+              Japanese writing systems, Hiragana and Katakana. Then, I
+              encountered Kanji, which some may see as daunting. I saw it as
+              exciting and a challenge, which I am still tackling to this day.
+              Learning Kanji perfectly matches my passion for continuous
+              learning, or kaizen, as many Japanese firms would say.
+            </p>
+            <br></br>
+            <p>
+              {" "}
+              Fast-forward to Tokyo—living the dream and surrounded by tech
+              innovation. After securing a spot at the University of Manchester,
+              I finally landed in Tokyo. Fueled by my goal of speaking Japanese
+              fluently, after six months of nonstop talking to anyone who would
+              entertain me, I could finally immerse myself in Japanese society
+              and the vibrant tech scene. From trains delivering sushi to my
+              table to captivating 3D billboards, Japan sparked a new passion.
+            </p>
+            <br></br>
+            <p>
+              {" "}
+              Back in the UK, from festivals to code, the magic of seeing a
+              Dev's creations come to life. Returning to complete my
+              dissertation through the challenges of COVID-19, I graduated and
+              started working at UK festivals. Working in the EPOS team, I rose
+              to Project Manager, gaining valuable tech knowledge and people
+              skills. I wanted to know more. Seeing the use of the developer's
+              code on large-scale events ignited a passion to learn more about
+              software development.
+            </p>
+            <br></br>
+            <p>
+              {" "}
+              Determined to become a software developer, I enrolled at
+              Northcoders, where I leveraged my language-learning skills to
+              conquer new coding challenges. Here, I came to grips with the
+              industry's ever-changing nature. My experience with learning
+              Japanese taught me valuable learning strategies, helping me break
+              down technologies and understand syntax. Now, my confidence is at
+              its peak, and I am ready to approach new challenges.
+            </p>
+            <br></br>
+            <p>
+              My goal? Right now, to join an inclusive, innovative, and
+              progressive team that values tech and soft skills to reach its
+              goals. My ultimate dream goal? To combine my love of Japan and
+              coding into a fulfilling career that makes a positive impact. This
+              could mean bridging a gap between tech worlds on a global scale,
+              allowing me to continuously improve and use my communication
+              skills. So, if you're looking for an inquisitive software
+              developer with a superb work ethic and some questionable skills in
+              Karaoke (in Japanese, of course!), drop me a message!
+            </p>
+          </div>
         </section>
 
         <div className="w-full h-px bg-black dark:bg-white"></div>
 
         <section className="flex justify-evenly">
-
-            <div className="flex flex-row justify-evenly">
-                <div className="px-4">
-                <h2 className="text-2xl font-bold my-4">Technical Skills</h2>
-                <ul>
-                    <li> <span className="font-bold">Languages:</span> JavaScript, TypeScript using Node.js and browsers as an environment</li>
-                    <li> <span className="font-bold">Methodologies:</span> Object Oriented Programming (OOP), Model View Controller (MVC) </li>
-                    <li> <span className="font-bold">Testing:</span> Test Driven Development (TDD), Jest, Supertest</li>
-                    <li> <span className="font-bold">Back-End:</span> Express.js, SQL, Postgres SQL, Firebase</li>
-                    <li> <span className="font-bold">Front-End:</span> HTML, CSS, React, React Native, Axios, accessibility tools such as Lighthouse, Expo, NextJS</li>
-                    <li> <span className="font-bold">Other:</span> Paired programming, technical communication, Regex, Agile and SCRUM methodologies</li>
-                </ul>
-                </div>
-
-                <div className="px-4">
-                <h2 className="text-2xl font-bold my-4">Skills And Expertise</h2>
-                <ul>
-                    <li>Japanese Language</li>
-                    <li>Project Management</li>
-                    <li>Learning quickly under high pressure</li>
-                    <li>Communication skills</li>
-                    <li>Working efficiently in a team</li>
-                </ul>
-                </div>   
+          <div className="flex flex-row justify-evenly">
+            <div className="px-4">
+              <h2 className="text-2xl font-bold my-4">Technical Skills</h2>
+              <ul className="text-lg">
+                <li>
+                  {" "}
+                  <span className="font-bold">Languages:</span> JavaScript,
+                  TypeScript using Node.js and browsers as an environment
+                </li>
+                <li>
+                  {" "}
+                  <span className="font-bold">Methodologies:</span> Object
+                  Oriented Programming (OOP), Model View Controller (MVC){" "}
+                </li>
+                <li>
+                  {" "}
+                  <span className="font-bold">Testing:</span> Test Driven
+                  Development (TDD), Jest, Supertest
+                </li>
+                <li>
+                  {" "}
+                  <span className="font-bold">Back-End:</span> Express.js, SQL,
+                  Postgres SQL, Firebase
+                </li>
+                <li>
+                  {" "}
+                  <span className="font-bold">Front-End:</span> HTML, CSS,
+                  React, React Native, Axios, accessibility tools such as
+                  Lighthouse, Expo, NextJS
+                </li>
+                <li>
+                  {" "}
+                  <span className="font-bold">Other:</span> Paired programming,
+                  technical communication, Regex, Agile and SCRUM methodologies
+                </li>
+              </ul>
             </div>
 
-            <div>
-                <h2 className="text-2xl font-bold my-4">Hobbies And Interets</h2>
-                <ul>
-                    <li>PC Gaming</li>
-                    <li>Japanese Culture and Language</li>
-                    <li>Sewing and clothes design</li>
-                    <li>Coding with friends</li>
-                </ul>
+            <div className="px-4">
+              <h2 className="text-2xl font-bold my-4">Skills And Expertise</h2>
+              <ul className="text-lg">
+                <li>Japanese Language</li>
+                <li>Project Management</li>
+                <li>Learning quickly under high pressure</li>
+                <li>Communication skills</li>
+                <li>Working efficiently in a team</li>
+              </ul>
             </div>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold my-4">Hobbies And Interets</h2>
+            <ul className="text-lg">
+              <li>PC Gaming</li>
+              <li>Japanese Culture and Language</li>
+              <li>Sewing and clothes design</li>
+              <li>Coding with friends</li>
+            </ul>
+          </div>
         </section>
-        
+
         <div className="w-full h-px bg-black dark:bg-white"></div>
 
         <section className="flex justify-evenly  ">
-            <div>
-                <h2 className="text-2xl font-bold my-4">My Values</h2>
+          <div>
+            <h2 className="text-2xl font-bold my-4">My Values</h2>
+            <div className="my-4 text-lg">
+              <p>
+                {" "}
+                I am very open and honest, and I believe everyone has the right
+                to be heard on any matter. I have always been an incredibly
+                inquisitive person. Whenever I have had an issue, question, or
+                doubt why something is, you can be sure I will ask why. If you
+                ask any of my school teachers, I'm sure they would agree. I
+                don't see the point in being confused when people and resources
+                are available everywhere to quench the thirst for
+                inquisitiveness.{" "}
+              </p>
+              <br></br>
+              <p>
+                {" "}
+                I have experienced many hardships in life, just as I am sure
+                many others have. I believe it is important to learn from life's
+                lessons and move forward with new knowledge in hopes of being
+                prepared for future events or becoming wise enough to prevent
+                them from happening again. With this in mind, although sometimes
+                with extreme difficulty, I think it is essential to look at
+                one's life in detail and try to think about the question "What
+                if" as much as possible in all aspects of life.{" "}
+              </p>
+              <br></br>
+              <p>
+                As you can probably tell, I am a big fan of communication. I
+                think it is important in all aspects of life, from personal to
+                work. Effective communication not only helps get a task done but
+                also helps each other understand thoughts and feelings regarding
+                whatever situation. Through good communication, problems can
+                become easier to solve and help ensure everyone is happy, and
+                thus, in my opinion, produce better results for everyone.
+              </p>
+              <br></br>
+              <p>
+                {" "}
+                Although I love to talk and interact with people, I also respect
+                when they don't. Everyone is different, and I believe that
+                everyone feels comfortable communicating with themselves or
+                others in the right situation, time, and place. Respecting
+                people's differences and communication methods is very important
+                and a hard skill to learn. I hope that as my life continues, I
+                can continue to develop my communication skills and help not
+                only myself but also others.{" "}
+              </p>
+              <br></br>
+              <p>
+                {" "}
+                I aim to work in an environment where my values shine through.
+                Clear and respectful communication is very important to achieve.
+                I would hope that all workplaces strive for this value to
+                develop a trusting team that can work under trust and provide
+                outstanding results.
+              </p>
             </div>
-
-            <div>
-                <h2 className="text-2xl font-bold my-4">Testimonials</h2>
-            </div>
+          </div>
         </section>
-
-
       </main>
     </>
   );
