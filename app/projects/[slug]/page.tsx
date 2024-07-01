@@ -20,7 +20,7 @@ interface Project {
   links?: { [key: string]: string };
 }
 
-export default function individualPage() {
+export default function IndividualPage() {
   const [pageProjet, setPageProject] = useState<Project>({} as Project);
   const [imageURL, setImageURL] = useState("");
   const route = usePathname();
