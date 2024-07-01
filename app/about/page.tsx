@@ -51,7 +51,9 @@ export default function About() {
 
         <section className="px-4">
           <h2 className="text-2xl font-bold my-4">Bio</h2>
-          <h3 className="text-lg underline font-bold">🎌 From Japanophile to Aspiring Dev: My Coding Odyssey 🧑🏻‍💻 </h3>
+          <h3 className="text-lg underline font-bold">
+            🎌 From Japanophile to Aspiring Dev: My Coding Odyssey 🧑🏻‍💻{" "}
+          </h3>
           <div className="my-4 text-justify text-lg">
             <p>
               {" "}
@@ -165,10 +167,14 @@ export default function About() {
               </ul>
             </div>
           </div>
+        </section>
 
-          <div>
-            <h2 className="text-2xl font-bold my-4">Hobbies And Interets</h2>
-            <ul className="text-lg">
+        <div className="w-full h-px bg-black dark:bg-white"></div>
+
+        <section className="flex justify-center">
+          <div className="px-4">
+            <h2 className="text-2xl text-center font-bold my-4">Hobbies And Interets</h2>
+            <ul className="text-lg text-center">
               <li>PC Gaming</li>
               <li>Japanese Culture and Language</li>
               <li>Sewing and clothes design</li>
