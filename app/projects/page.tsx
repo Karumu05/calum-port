@@ -11,15 +11,13 @@ import { db } from "../firebaseConfig";
 import ProjectArticle from "../components/projectArticle";
 import FeaturedProjectArticle from "../components/featuredProjectArticle";
 
+type ProjectData = {
+  [key: string]: any; 
+};
+
 type Project = {
   id?: string;
-  date: string;
-  description: string;
-  image: string;
-  name: string;
-  techUsed: string;
-  info: string;
-};
+} & ProjectData
 
 interface FetchedProjectData {
   id?: string;
@@ -43,7 +41,8 @@ export default function Projects() {
         const projectSnap = await get(projectsRef);
 
         if (projectSnap.exists()) {
-          const projectArray = Object.entries(projectSnap.val()).map(
+          const projectData: ProjectData = projectSnap.val();
+          const projectArray = Object.entries(projectData).map(
             ([id, data]) => ({ id, ...data })
           );
           setAllProjects(projectArray);

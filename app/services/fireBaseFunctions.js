@@ -39,7 +39,7 @@ export const FetchAboutImageUrl = async (imageName) => {
 
     } catch (error) {
         console.error("Error fetching image", error)
-        return null
+        return ""
     }
 
 }
