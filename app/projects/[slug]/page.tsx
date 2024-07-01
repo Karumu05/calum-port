@@ -124,9 +124,9 @@ export default function individualPage() {
         </div>
         <div className="w-full h-px bg-black dark:bg-white"></div>
 
-        <div>
-          <h3 className="text-center font-bold">Project Links</h3>
-          <div className="flex justify-evenly">
+        <div className=" p-4">
+          <h3 className="text-center font-bold text-2xl">Project Links</h3>
+          <div className="flex justify-evenly font-bold text-lg">
             {pageProjet.links ? (
               Object.keys(pageProjet.links).map((key) => (
                 <a
@@ -134,6 +134,7 @@ export default function individualPage() {
                   href={pageProjet.links?.[key]}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="hover:text-white"
                 >
                   {key}
                 </a>
