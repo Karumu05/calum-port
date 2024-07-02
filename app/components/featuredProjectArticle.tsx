@@ -8,7 +8,7 @@ interface ProjectArticleProps {
 
 export default function FeaturedProjectArticle(props: ProjectArticleProps) {
   return (
-  <div className="border-2 border-black dark:border-white rounded-xl lg:row-span-2">
+  <div className="border-2 border-black dark:border-white shimmerBackground rounded-xl lg:row-span-2">
     <Link href={`/projects/${props.name}`}>
       <article className=" w-full h-full p-4 group">
         <div className="flex">

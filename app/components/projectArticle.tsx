@@ -8,7 +8,7 @@ interface ProjectArticleProps {
 
 export default function ProjectArticle(props: ProjectArticleProps) {
   return (
-    <div className="flex flex-col gap-8 max-auto dark:border-white border-2 border-black rounded-xl">
+    <div className="flex flex-col gap-8 max-auto dark:border-white shimmerBackground border-2 border-black rounded-xl">
       <Link href={`/projects/${props.name}`}  >
         <article className="w-full h-full p-4 group">
           <div className="flex">
