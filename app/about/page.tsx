@@ -85,9 +85,9 @@ export default function About() {
               dissertation through the challenges of COVID-19, I graduated and
               started working at UK festivals. Working in the EPOS team, I rose
               to Project Manager, gaining valuable tech knowledge and people
-              skills. I wanted to know more. Seeing the use of the developer&apos;s
-              code on large-scale events ignited a passion to learn more about
-              software development.
+              skills. I wanted to know more. Seeing the use of the
+              developer&apos;s code on large-scale events ignited a passion to
+              learn more about software development.
             </p>
             <br></br>
             <p>
@@ -173,7 +173,9 @@ export default function About() {
 
         <section className="flex justify-center">
           <div className="px-4">
-            <h2 className="text-2xl text-center font-bold my-4">Hobbies And Interets</h2>
+            <h2 className="text-2xl text-center font-bold my-4">
+              Hobbies And Interets
+            </h2>
             <ul className="text-lg text-center">
               <li>PC Gaming</li>
               <li>Japanese Culture and Language</li>
@@ -196,21 +198,22 @@ export default function About() {
                 inquisitive person. Whenever I have had an issue, question, or
                 doubt why something is, you can be sure I will ask why. If you
                 ask any of my school teachers, I&apos;m sure they would agree. I
-                don&apos;t see the point in being confused when people and resources
-                are available everywhere to quench the thirst for
+                don&apos;t see the point in being confused when people and
+                resources are available everywhere to quench the thirst for
                 inquisitiveness.{" "}
               </p>
               <br></br>
               <p>
                 {" "}
                 I have experienced many hardships in life, just as I am sure
-                many others have. I believe it is important to learn from life&apos;s
-                lessons and move forward with new knowledge in hopes of being
-                prepared for future events or becoming wise enough to prevent
-                them from happening again. With this in mind, although sometimes
-                with extreme difficulty, I think it is essential to look at
-                one&apos;s life in detail and try to think about the question &quot;What
-                if&quot; as much as possible in all aspects of life.{" "}
+                many others have. I believe it is important to learn from
+                life&apos;s lessons and move forward with new knowledge in hopes
+                of being prepared for future events or becoming wise enough to
+                prevent them from happening again. With this in mind, although
+                sometimes with extreme difficulty, I think it is essential to
+                look at one&apos;s life in detail and try to think about the
+                question &quot;What if&quot; as much as possible in all aspects
+                of life.{" "}
               </p>
               <br></br>
               <p>
@@ -229,18 +232,18 @@ export default function About() {
                 when they don&apos;t. Everyone is different, and I believe that
                 everyone feels comfortable communicating with themselves or
                 others in the right situation, time, and place. Respecting
-                people&apos;s differences and communication methods is very important
-                and a hard skill to learn. I hope that as my life continues, I
-                can continue to develop my communication skills and help not
-                only myself but also others.{" "}
+                people&apos;s differences and communication methods is very
+                important and a hard skill to learn. I hope that as my life
+                continues, I can continue to develop my communication skills and
+                help not only myself but also others.{" "}
               </p>
               <br></br>
               <p>
                 {" "}
-                I aim to work in an environment where these values shine through.
-                Clear and respectful communication is very important to achieve.
-                I would hope that all workplaces strive for this value to
-                develop a trusting team that can work under trust and provide
+                I aim to work in an environment where these values shine
+                through. Clear and respectful communication is very important to
+                achieve. I would hope that all workplaces strive for this value
+                to develop a trusting team that can work under trust and provide
                 outstanding results.
               </p>
             </div>
