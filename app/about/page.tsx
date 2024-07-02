@@ -53,20 +53,20 @@ export default function About() {
 
         <div className="w-full h-px bg-black dark:bg-white"></div>
 
-        <Bio/>
+        <Bio />
 
         <div className="w-full h-px bg-black dark:bg-white"></div>
 
-        <Skills/>
+        <Skills />
 
         <div className="w-full h-px bg-black dark:bg-white"></div>
 
-        <HobbiesAndInterests/>
+        <HobbiesAndInterests />
 
         <div className="w-full h-px bg-black dark:bg-white"></div>
 
-        <Values/>
-       
+        <Values />
+
         <div className="absolute left-0 text-gray-100">
           <a href="https://www.freepik.com/free-photo/mint-blue-watercolor-texture-background-wallpaper_15601165.htm#from_view=detail_alsolike">
             Background by rawpixel.com on Freepik

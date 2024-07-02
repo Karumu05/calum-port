@@ -85,7 +85,7 @@ export default function IndividualPage() {
         </div>
         <div className="w-full h-px bg-black dark:bg-white"></div>
 
-        <div className="h-1/2 max-w-full relative">
+        <div className="h-1/2 max-w-full relative ">
           {imageURL ? (
             <Image src={imageURL} fill={true} alt="Image of Project" />
           ) : (
@@ -94,14 +94,14 @@ export default function IndividualPage() {
         </div>
         <div className="w-full h-px bg-black dark:bg-white"></div>
 
-        <div>
+        <div className="shimmerBackground  hover:glassContainer p-4 border-2 border-transparent rounded-xl">
           <p className="text-lg font-medium tracking-wide text-justify">
             {pageProjet.description}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="grid-cols-1">
+          <div className="grid-cols-1 shimmerBackground  hover:glassContainer p-4 border-2 border-transparent rounded-xl">
             <h3 className="text-2xl font-bold  my-2">Tech Used:</h3>
             <div className="w-full h-px bg-black dark:bg-white"></div>
 
@@ -112,7 +112,7 @@ export default function IndividualPage() {
             </ul>
           </div>
 
-          <div className="grid-cols-2">
+          <div className="grid-cols-2 shimmerBackground  hover:glassContainer p-4 border-2 border-transparent rounded-xl">
             <h3 className="text-center text-2xl font-bold my-2">
               Personal Comments
             </h3>
@@ -124,7 +124,7 @@ export default function IndividualPage() {
         </div>
         <div className="w-full h-px bg-black dark:bg-white"></div>
 
-        <div className=" p-4">
+        <div className=" p-4 shimmerBackground  hover:glassContainer p-4 border-2 border-transparent rounded-xl">
           <h3 className="text-center font-bold text-2xl">Project Links</h3>
           <div className="flex justify-evenly font-bold text-lg">
             {pageProjet.links ? (
@@ -134,7 +134,7 @@ export default function IndividualPage() {
                   href={pageProjet.links?.[key]}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white"
+                  className="hover:ring-2 rounded ring-black ring-offset-4"
                 >
                   {key}
                 </a>
