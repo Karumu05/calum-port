@@ -3,7 +3,7 @@ const HobbiesAndInterests = () => {
         <section className="flex justify-center shimmerBackground  hover:glassContainer border-2 border-transparent rounded-xl">
         <div className="px-4">
           <h2 className="text-2xl text-center font-bold my-4">
-            Hobbies And Interets
+            Hobbies And Interests
           </h2>
           <ul className="text-lg text-center">
             <li>PC Gaming</li>
