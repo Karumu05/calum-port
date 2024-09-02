@@ -32,7 +32,7 @@ export default function About() {
       </header>
 
       <main className="h-screen px-6 mx-auto space-y-8 max-w-7xl">
-        <section className=" flex justify-evenly my-4 p-8">
+        <section className="lex justify-evenly my-4 p-8">
           <Image
             src={profilePic}
             height={500}
@@ -41,7 +41,7 @@ export default function About() {
             className="rounded-full"
           />
 
-          <div className="flex flex-col text-center justify-center p-4 m-4">
+          <div className="flex flex-col   p-4 m-4">
             <h1 className="text-5xl text-center font-bold my-8 underline">
               Calum Borders
             </h1>
@@ -49,6 +49,7 @@ export default function About() {
               Software Engineer
             </h2>
           </div>
+
         </section>
 
         <div className="w-full h-px bg-black dark:bg-white"></div>

@@ -115,7 +115,7 @@ export default function Projects() {
         <div className="hidden w-full h-px md:block bg-black dark:bg-white "></div>
 
         <div>
-          <div className="flex justify-evenly">
+          <div className="flex justify-evenly gap-2">
             {mapProjectsArray.map((genProject) => {
               return (
                 <ProjectArticle

@@ -7,7 +7,10 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 config.autoAddCss = false;
 
+
 export default function Home() {
+
+
   return (
     <>
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -21,7 +24,7 @@ export default function Home() {
         </nav>
 
         <div>
-          <h1 className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title  sm:text-4xl md:text-9xl whitespace-nowrap bg-clip-text glow-text ">
+          <h1 className="z-10 text-4xl text-transparent bg-white cursor-default text-edge-outline sm:text-4xl md:text-9xl whitespace-nowrap bg-clip-text glow-text ">
             Calum Borders
           </h1>
 
@@ -32,7 +35,7 @@ export default function Home() {
 
         <div className="mb-32 grid text-center gap-5 lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-3">
           <Link href="https://github.com/Karumu05" className="contact-link">
-            <FontAwesomeIcon icon={faGithub} size="9x" />
+            <FontAwesomeIcon icon={faGithub} size="5x" />
             <p>github.com/Karumu05</p>
           </Link>
 
@@ -40,12 +43,12 @@ export default function Home() {
             href="https://www.linkedin.com/in/calum-borders/"
             className="contact-link"
           >
-            <FontAwesomeIcon icon={faLinkedin} size="9x" />
+            <FontAwesomeIcon icon={faLinkedin} size="5x" />
             <p>linkedin.com/in/calum-borders</p>
           </Link>
 
           <a href="mailto:calum.borders@gmail.com" className="contact-link">
-            <FontAwesomeIcon icon={faEnvelope} size="9x" />
+            <FontAwesomeIcon icon={faEnvelope} size="5x" />
             <p>calum.borders@gmail.com</p>
           </a>
         </div>
